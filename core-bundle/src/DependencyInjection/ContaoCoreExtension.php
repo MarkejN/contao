@@ -63,6 +63,7 @@ class ContaoCoreExtension extends Extension
         $loader->load('services.yml');
         $loader->load('migrations.yml');
 
+        $container->setParameter('contao.allowed_protocols', $config['allowed_protocols']);
         $container->setParameter('contao.web_dir', $config['web_dir']);
         $container->setParameter('contao.upload_path', $config['upload_path']);
         $container->setParameter('contao.editable_files', $config['editable_files']);
